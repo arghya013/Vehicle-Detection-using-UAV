@@ -1,6 +1,6 @@
 import cv2
 #our video
-video = cv2.VideoCapture('Tesla Autopilot Dashcam Video.mp4')
+video = cv2.VideoCapture('Video File Name.mp4')
 
 #Our Pre-defined car classifier
 classifier_file = 'car_detector.xml'
@@ -41,35 +41,5 @@ while True:
  
 #release the video capture
 video.release()
-
-
-'''
-#Our Image
-img_file = 'Car Image.jpg'
-
-#create OpenCV image
-img = cv2.imread(img_file)
-
-#convert to grayscale (required for haar cascade)
-black_n_white = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-
-#create car classifier
-car_tracker = cv2.CascadeClassifier(classifier_file)
-
-#detect cars
-cars = car_tracker.detectMultiScale(black_n_white)
-
-#draw rectangles around the cars
-for (x, y, w, h) in cars:
-    cv2.rectangle(img, (x, y), (x+w, y+h), (0, 0, 255), 2)
-
-
-
-#Display the image with the cars spotted
-cv2.imshow("Arghya's Car Detector", img)
-
-#Don't autoclose (Wait here in the code adn listen for a key press)
-cv2.waitKey()
-'''
 
 print("Code Completed")
